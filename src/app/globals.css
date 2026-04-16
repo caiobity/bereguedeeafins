@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Colors */
+  --color-yellow: #f2d620;
+  --color-yellow-light: #f7e96b;
+  --color-purple: #3a2178;
+  --color-purple-dark: #2a1558;
+  --color-purple-light: #5a3da8;
+  --color-pink: #e6267a;
+  --color-pink-light: #f05a9e;
+  --color-cyan: #3bbde0;
+  --color-cyan-light: #6dd4f0;
+  --color-gray-100: #f8f9fa;
+  --color-gray-200: #e9ecef;
+  --color-gray-300: #dee2e6;
+  --color-gray-600: #6c757d;
+  --color-gray-800: #343a40;
+  --color-gray-900: #212529;
+
+  /* Fonts */
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.16);
+  --shadow-xl: 0 16px 60px rgba(0, 0, 0, 0.2);
+
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  /* Animations */
+  --animate-float: float 8s ease-in-out infinite;
+  --animate-float-reverse: float 6s ease-in-out infinite reverse;
+  --animate-logo-entry: logoEntry 1s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  --animate-fade-up: fadeUp 0.8s ease both;
+  --animate-fade-up-delay: fadeUp 0.8s ease both 0.3s;
+  --animate-pulse-glow: pulseGlow 2s ease-in-out infinite;
+  --animate-scroll-bounce: scrollBounce 1.5s ease-in-out infinite;
+  --animate-spin: spin 0.8s linear infinite;
+  --animate-modal-in: modalIn 0.3s ease;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-30px) scale(1.05); }
+}
+
+@keyframes logoEntry {
+  from { opacity: 0; transform: scale(0.8) translateY(20px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 4px 20px rgba(230, 38, 122, 0.35); }
+  50% { box-shadow: 0 4px 35px rgba(230, 38, 122, 0.6); }
+}
+
+@keyframes scrollBounce {
+  0%, 100% { transform: rotate(45deg) translateY(0); }
+  50% { transform: rotate(45deg) translateY(6px); }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes modalIn {
+  from { opacity: 0; transform: scale(0.95) translateY(10px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: var(--font-body), 'DM Sans', sans-serif;
+  color: var(--color-gray-900);
+  background: #ffffff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading), 'Space Grotesk', sans-serif;
+  line-height: 1.2;
+}
+
+.animate-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}

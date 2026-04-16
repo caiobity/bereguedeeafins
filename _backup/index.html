@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bereguedê & Afins | Festa em Salvador</title>
+    <meta name="description" content="Bereguedê & Afins - A maior festa de Salvador! Compre seu ingresso online com segurança.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Mercado Pago SDK -->
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
+</head>
+<body>
+    <!-- Header / Navbar -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <img src="assets/logo.jpg" alt="Bereguedê & Afins" class="nav__logo-img">
+            </a>
+            <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav__menu" id="nav-menu">
+                <li><a href="#home" class="nav__link">Início</a></li>
+                <li><a href="#sobre" class="nav__link">Sobre</a></li>
+                <li><a href="#atracoes" class="nav__link">Atrações</a></li>
+                <li><a href="#ingressos" class="nav__link">Ingressos</a></li>
+                <li><a href="#local" class="nav__link">Local</a></li>
+                <li><a href="#ingressos" class="nav__link nav__link--cta">Comprar Ingresso</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero__particles" id="particles"></div>
+        <div class="hero__content container">
+            <img src="assets/logo.jpg" alt="Bereguedê & Afins" class="hero__logo">
+            <div class="hero__info">
+                <div class="hero__date-badge">
+                    <span class="hero__date-icon">📅</span>
+                    <span>14 de Junho de 2026 • Sábado</span>
+                </div>
+                <p class="hero__subtitle">A festa que mistura todos os ritmos de Salvador num só lugar!</p>
+                <div class="hero__details">
+                    <span><span class="hero__icon">📍</span> Salvador - BA</span>
+                    <span><span class="hero__icon">🕐</span> 22h às 06h</span>
+                </div>
+                <a href="#ingressos" class="btn btn--primary btn--large hero__cta">
+                    Garanta seu Ingresso
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+        <div class="hero__scroll-indicator">
+            <span>Role para baixo</span>
+            <div class="hero__scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section class="section sobre" id="sobre">
+        <div class="container">
+            <h2 class="section__title">Sobre o Evento</h2>
+            <div class="sobre__grid">
+                <div class="sobre__card">
+                    <div class="sobre__card-icon">🎵</div>
+                    <h3>Música</h3>
+                    <p>Uma mistura única de axé, pagode, arrocha, samba, funk e muito mais. Todos os ritmos que fazem Salvador pulsar!</p>
+                </div>
+                <div class="sobre__card">
+                    <div class="sobre__card-icon">🎉</div>
+                    <h3>Experiência</h3>
+                    <p>Cenografia imersiva, open bar premium, food trucks com o melhor da culinária baiana e muita energia positiva.</p>
+                </div>
+                <div class="sobre__card">
+                    <div class="sobre__card-icon">🌟</div>
+                    <h3>Ambiente</h3>
+                    <p>Espaço ao ar livre com estrutura completa, área VIP exclusiva, lounges e segurança reforçada para sua diversão.</p>
+                </div>
+            </div>
+
+            <!-- Countdown -->
+            <div class="countdown" id="countdown">
+                <h3 class="countdown__title">Contagem Regressiva</h3>
+                <div class="countdown__timer">
+                    <div class="countdown__item">
+                        <span class="countdown__number" id="days">00</span>
+                        <span class="countdown__label">Dias</span>
+                    </div>
+                    <div class="countdown__separator">:</div>
+                    <div class="countdown__item">
+                        <span class="countdown__number" id="hours">00</span>
+                        <span class="countdown__label">Horas</span>
+                    </div>
+                    <div class="countdown__separator">:</div>
+                    <div class="countdown__item">
+                        <span class="countdown__number" id="minutes">00</span>
+                        <span class="countdown__label">Min</span>
+                    </div>
+                    <div class="countdown__separator">:</div>
+                    <div class="countdown__item">
+                        <span class="countdown__number" id="seconds">00</span>
+                        <span class="countdown__label">Seg</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Atrações Section -->
+    <section class="section atracoes" id="atracoes">
+        <div class="container">
+            <h2 class="section__title">Atrações</h2>
+            <p class="section__subtitle">Line-up que vai fazer você não parar de dançar</p>
+            <div class="atracoes__grid">
+                <div class="atracoes__card atracoes__card--destaque">
+                    <div class="atracoes__badge">Headliner</div>
+                    <div class="atracoes__avatar">🎤</div>
+                    <h3>Atração Principal</h3>
+                    <p>Em breve</p>
+                </div>
+                <div class="atracoes__card">
+                    <div class="atracoes__avatar">🎸</div>
+                    <h3>Atração 2</h3>
+                    <p>Em breve</p>
+                </div>
+                <div class="atracoes__card">
+                    <div class="atracoes__avatar">🥁</div>
+                    <h3>Atração 3</h3>
+                    <p>Em breve</p>
+                </div>
+                <div class="atracoes__card">
+                    <div class="atracoes__avatar">🎹</div>
+                    <h3>Atração 4</h3>
+                    <p>Em breve</p>
+                </div>
+                <div class="atracoes__card">
+                    <div class="atracoes__avatar">🎧</div>
+                    <h3>DJ Residente</h3>
+                    <p>Em breve</p>
+                </div>
+                <div class="atracoes__card">
+                    <div class="atracoes__avatar">🎷</div>
+                    <h3>Atração 6</h3>
+                    <p>Em breve</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ingressos Section -->
+    <section class="section ingressos" id="ingressos">
+        <div class="container">
+            <h2 class="section__title">Ingressos</h2>
+            <p class="section__subtitle">Escolha o lote ideal para você</p>
+
+            <div class="ingressos__grid">
+                <!-- Pista -->
+                <div class="ingressos__card">
+                    <div class="ingressos__card-header">
+                        <h3>Pista</h3>
+                        <div class="ingressos__lote">1º Lote</div>
+                    </div>
+                    <div class="ingressos__preco">
+                        <span class="ingressos__cifrao">R$</span>
+                        <span class="ingressos__valor">60</span>
+                        <span class="ingressos__centavos">,00</span>
+                    </div>
+                    <ul class="ingressos__beneficios">
+                        <li>Acesso à área de pista</li>
+                        <li>Shows de todas as atrações</li>
+                        <li>Acesso aos food trucks</li>
+                    </ul>
+                    <div class="ingressos__qty">
+                        <label>Quantidade:</label>
+                        <div class="qty-control">
+                            <button class="qty-btn" onclick="changeQty('pista', -1)">−</button>
+                            <input type="number" id="qty-pista" class="qty-input" value="1" min="1" max="10" readonly>
+                            <button class="qty-btn" onclick="changeQty('pista', 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="btn btn--primary btn--full" onclick="comprarIngresso('pista', 60)">
+                        Comprar Ingresso
+                    </button>
+                </div>
+
+                <!-- Camarote -->
+                <div class="ingressos__card ingressos__card--destaque">
+                    <div class="ingressos__card-tag">Mais Vendido</div>
+                    <div class="ingressos__card-header">
+                        <h3>Camarote</h3>
+                        <div class="ingressos__lote">1º Lote</div>
+                    </div>
+                    <div class="ingressos__preco">
+                        <span class="ingressos__cifrao">R$</span>
+                        <span class="ingressos__valor">120</span>
+                        <span class="ingressos__centavos">,00</span>
+                    </div>
+                    <ul class="ingressos__beneficios">
+                        <li>Área VIP com visão privilegiada</li>
+                        <li>Open bar (cerveja e drinks)</li>
+                        <li>Banheiros exclusivos</li>
+                        <li>Acesso aos food trucks</li>
+                    </ul>
+                    <div class="ingressos__qty">
+                        <label>Quantidade:</label>
+                        <div class="qty-control">
+                            <button class="qty-btn" onclick="changeQty('camarote', -1)">−</button>
+                            <input type="number" id="qty-camarote" class="qty-input" value="1" min="1" max="10" readonly>
+                            <button class="qty-btn" onclick="changeQty('camarote', 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="btn btn--primary btn--full" onclick="comprarIngresso('camarote', 120)">
+                        Comprar Ingresso
+                    </button>
+                </div>
+
+                <!-- Open Bar Premium -->
+                <div class="ingressos__card">
+                    <div class="ingressos__card-header">
+                        <h3>Premium</h3>
+                        <div class="ingressos__lote">1º Lote</div>
+                    </div>
+                    <div class="ingressos__preco">
+                        <span class="ingressos__cifrao">R$</span>
+                        <span class="ingressos__valor">200</span>
+                        <span class="ingressos__centavos">,00</span>
+                    </div>
+                    <ul class="ingressos__beneficios">
+                        <li>Área Premium exclusiva</li>
+                        <li>Open bar completo (premium)</li>
+                        <li>Buffet incluso</li>
+                        <li>Meet & Greet com atrações</li>
+                        <li>Estacionamento VIP</li>
+                    </ul>
+                    <div class="ingressos__qty">
+                        <label>Quantidade:</label>
+                        <div class="qty-control">
+                            <button class="qty-btn" onclick="changeQty('premium', -1)">−</button>
+                            <input type="number" id="qty-premium" class="qty-input" value="1" min="1" max="10" readonly>
+                            <button class="qty-btn" onclick="changeQty('premium', 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="btn btn--primary btn--full" onclick="comprarIngresso('premium', 200)">
+                        Comprar Ingresso
+                    </button>
+                </div>
+            </div>
+
+            <!-- Métodos de Pagamento -->
+            <div class="pagamento-info">
+                <p>Pagamento seguro via <strong>Mercado Pago</strong></p>
+                <div class="pagamento-metodos">
+                    <span class="pagamento-metodo">💳 Cartão de Crédito</span>
+                    <span class="pagamento-metodo">📱 PIX</span>
+                    <span class="pagamento-metodo">📄 Boleto</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Checkout -->
+    <div class="modal-overlay" id="modal-checkout">
+        <div class="modal">
+            <button class="modal__close" onclick="fecharModal()">&times;</button>
+            <h2 class="modal__title">Finalizar Compra</h2>
+
+            <div class="modal__resumo" id="modal-resumo">
+                <!-- Preenchido via JS -->
+            </div>
+
+            <form id="form-checkout" class="checkout-form">
+                <div class="form-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required placeholder="seu@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="cpf">CPF</label>
+                    <input type="text" id="cpf" name="cpf" required placeholder="000.000.000-00" maxlength="14">
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" name="telefone" required placeholder="(71) 99999-9999" maxlength="15">
+                </div>
+
+                <h3 class="modal__subtitle">Método de Pagamento</h3>
+                <div class="payment-methods">
+                    <label class="payment-method">
+                        <input type="radio" name="metodo" value="pix" checked>
+                        <div class="payment-method__card">
+                            <span class="payment-method__icon">📱</span>
+                            <span>PIX</span>
+                            <span class="payment-method__desc">Aprovação instantânea</span>
+                        </div>
+                    </label>
+                    <label class="payment-method">
+                        <input type="radio" name="metodo" value="cartao">
+                        <div class="payment-method__card">
+                            <span class="payment-method__icon">💳</span>
+                            <span>Cartão de Crédito</span>
+                            <span class="payment-method__desc">Até 3x sem juros</span>
+                        </div>
+                    </label>
+                    <label class="payment-method">
+                        <input type="radio" name="metodo" value="boleto">
+                        <div class="payment-method__card">
+                            <span class="payment-method__icon">📄</span>
+                            <span>Boleto</span>
+                            <span class="payment-method__desc">Vence em 3 dias</span>
+                        </div>
+                    </label>
+                </div>
+
+                <!-- Card Fields (hidden by default) -->
+                <div id="card-fields" class="card-fields" style="display:none">
+                    <div class="form-group">
+                        <label for="card-number">Número do Cartão</label>
+                        <input type="text" id="card-number" placeholder="0000 0000 0000 0000" maxlength="19">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="card-expiry">Validade</label>
+                            <input type="text" id="card-expiry" placeholder="MM/AA" maxlength="5">
+                        </div>
+                        <div class="form-group">
+                            <label for="card-cvv">CVV</label>
+                            <input type="text" id="card-cvv" placeholder="123" maxlength="4">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="card-holder">Nome no Cartão</label>
+                        <input type="text" id="card-holder" placeholder="Como está no cartão">
+                    </div>
+                    <div class="form-group">
+                        <label for="parcelas">Parcelas</label>
+                        <select id="parcelas">
+                            <option value="1">1x sem juros</option>
+                            <option value="2">2x sem juros</option>
+                            <option value="3">3x sem juros</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="modal__total" id="modal-total"></div>
+
+                <button type="submit" class="btn btn--primary btn--full btn--large" id="btn-pagar">
+                    <span id="btn-pagar-text">Pagar com PIX</span>
+                    <div class="spinner" id="btn-spinner" style="display:none"></div>
+                </button>
+
+                <p class="checkout-seguro">
+                    🔒 Pagamento 100% seguro processado pelo Mercado Pago
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal de Sucesso -->
+    <div class="modal-overlay" id="modal-sucesso">
+        <div class="modal modal--sucesso">
+            <div class="sucesso__icon">✅</div>
+            <h2>Compra Realizada!</h2>
+            <p>Seu ingresso foi confirmado. Você receberá os detalhes no e-mail informado.</p>
+            <div class="sucesso__detalhes" id="sucesso-detalhes"></div>
+            <button class="btn btn--primary btn--full" onclick="fecharModalSucesso()">Fechar</button>
+        </div>
+    </div>
+
+    <!-- Local Section -->
+    <section class="section local" id="local">
+        <div class="container">
+            <h2 class="section__title">Local do Evento</h2>
+            <div class="local__grid">
+                <div class="local__info">
+                    <div class="local__detail">
+                        <span class="local__icon">📍</span>
+                        <div>
+                            <h4>Endereço</h4>
+                            <p>Salvador, Bahia<br>Local a ser confirmado</p>
+                        </div>
+                    </div>
+                    <div class="local__detail">
+                        <span class="local__icon">📅</span>
+                        <div>
+                            <h4>Data</h4>
+                            <p>14 de Junho de 2026 (Sábado)</p>
+                        </div>
+                    </div>
+                    <div class="local__detail">
+                        <span class="local__icon">🕐</span>
+                        <div>
+                            <h4>Horário</h4>
+                            <p>Abertura dos portões: 21h<br>Início: 22h</p>
+                        </div>
+                    </div>
+                    <div class="local__detail">
+                        <span class="local__icon">👔</span>
+                        <div>
+                            <h4>Dress Code</h4>
+                            <p>Venha como quiser! A vibe é liberdade.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="local__mapa">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124575.72686880693!2d-38.55!3d-12.97!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7161402c4de42f7%3A0x34e32d220e18e2a1!2sSalvador%20-%20BA!5e0!3m2!1spt-BR!2sbr"
+                        width="100%" height="400" style="border:0; border-radius: 16px;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq" id="faq">
+        <div class="container">
+            <h2 class="section__title">Perguntas Frequentes</h2>
+            <div class="faq__list">
+                <div class="faq__item">
+                    <button class="faq__question" onclick="toggleFaq(this)">
+                        <span>O ingresso é individual?</span>
+                        <span class="faq__arrow">▼</span>
+                    </button>
+                    <div class="faq__answer">
+                        <p>Sim, cada ingresso dá direito a 1 (uma) entrada. O ingresso é pessoal e intransferível, vinculado ao CPF do comprador.</p>
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <button class="faq__question" onclick="toggleFaq(this)">
+                        <span>Posso parcelar o ingresso?</span>
+                        <span class="faq__arrow">▼</span>
+                    </button>
+                    <div class="faq__answer">
+                        <p>Sim! Via cartão de crédito, é possível parcelar em até 3x sem juros pelo Mercado Pago.</p>
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <button class="faq__question" onclick="toggleFaq(this)">
+                        <span>Qual a política de cancelamento?</span>
+                        <span class="faq__arrow">▼</span>
+                    </button>
+                    <div class="faq__answer">
+                        <p>Cancelamentos podem ser feitos em até 7 dias após a compra, respeitando o Código de Defesa do Consumidor. Após esse prazo, não haverá reembolso.</p>
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <button class="faq__question" onclick="toggleFaq(this)">
+                        <span>Menores de idade podem entrar?</span>
+                        <span class="faq__arrow">▼</span>
+                    </button>
+                    <div class="faq__answer">
+                        <p>O evento é para maiores de 18 anos. É obrigatória a apresentação de documento com foto na entrada.</p>
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <button class="faq__question" onclick="toggleFaq(this)">
+                        <span>O pagamento via PIX é seguro?</span>
+                        <span class="faq__arrow">▼</span>
+                    </button>
+                    <div class="faq__answer">
+                        <p>Sim! Todos os pagamentos são processados pelo Mercado Pago, uma das maiores plataformas de pagamento do Brasil, com criptografia de ponta a ponta.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <img src="assets/logo.jpg" alt="Bereguedê & Afins" class="footer__logo">
+                    <p>A festa que mistura todos os ritmos de Salvador!</p>
+                </div>
+                <div class="footer__links">
+                    <h4>Links Rápidos</h4>
+                    <a href="#sobre">Sobre</a>
+                    <a href="#atracoes">Atrações</a>
+                    <a href="#ingressos">Ingressos</a>
+                    <a href="#local">Local</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+                <div class="footer__contato">
+                    <h4>Contato</h4>
+                    <a href="mailto:contato@bereguede.com.br">contato@bereguede.com.br</a>
+                    <a href="https://wa.me/5571999999999" target="_blank">WhatsApp: (71) 99999-9999</a>
+                    <div class="footer__social">
+                        <a href="#" aria-label="Instagram" class="social-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="#" aria-label="TikTok" class="social-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.71a8.21 8.21 0 0 0 4.76 1.52v-3.4a4.85 4.85 0 0 1-1-.14z"/></svg>
+                        </a>
+                        <a href="#" aria-label="Twitter" class="social-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 Bereguedê & Afins. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
