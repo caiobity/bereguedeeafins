@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const CARDS = [
   {
     icon: "🎵",
@@ -63,6 +65,23 @@ export default function Sobre() {
           <p className="mt-6 text-lg font-semibold text-purple italic">
             "Bereguedê e Afins é sobre sentir, pertencer e viver a experiência."
           </p>
+
+          {/* Márcia Bity */}
+          <div className="mt-8 flex flex-col items-center gap-3">
+            <div className="relative size-28 overflow-hidden rounded-full border-4 border-pink shadow-lg">
+              <Image
+                src="/marcia bity.jpeg"
+                alt="Márcia Bity"
+                fill
+                sizes="112px"
+                className="object-cover object-top"
+              />
+            </div>
+            <div className="text-center">
+              <p className="font-bold text-purple">Márcia Bity</p>
+              <p className="text-xs text-gray-500">Fundadora & Produtora</p>
+            </div>
+          </div>
         </div>
 
         <div className="mt-10 mb-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">

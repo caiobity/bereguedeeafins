@@ -44,7 +44,7 @@ export default function Atracoes() {
                     src={attraction.image}
                     alt={attraction.name}
                     fill
-                    className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                    className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
                   />
                 ) : (
                   <div className={cn(

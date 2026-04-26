@@ -15,7 +15,8 @@
       "Bash(cp -r assets _backup/)",
       "Bash(npx create-next-app@latest . --js --app --tailwind --src-dir --no-turbopack --import-alias \"@/*\" --use-npm --yes)",
       "Bash(npx create-next-app@latest bereguede-temp --js --app --tailwind --src-dir --no-turbopack --import-alias \"@/*\" --use-npm --yes)",
-      "mcp__Claude_Preview__preview_start"
+      "mcp__Claude_Preview__preview_start",
+      "Bash(powershell -NoProfile -Command \"Get-ChildItem -Path 'C:\\\\Users\\\\Caio Bity\\\\OneDrive\\\\Área de Trabalho\\\\bereguede e afins\\\\public' -Recurse -File | Sort-Object LastWriteTime -Descending | Select-Object -First 5 | Format-Table Name, LastWriteTime, Length\")"
     ]
   }
 }

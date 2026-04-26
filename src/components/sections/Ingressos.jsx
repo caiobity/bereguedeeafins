@@ -66,13 +66,14 @@ function TicketCard({ ticket }) {
         <QtyControl value={qty} onChange={setQty} />
       </div>
 
-      <button
-        type="button"
-        onClick={() => openCheckout(ticket, qty)}
-        className="w-full rounded-xl bg-linear-to-br from-pink to-cyan py-3 text-sm font-bold text-white shadow-[0_4px_20px_rgba(230,38,122,0.3)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_6px_30px_rgba(230,38,122,0.5)]"
+      <a
+        href="https://shotgun.live/pt-br/events/curumin-cabuloso-gil-dj-roger-n-roll"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block w-full rounded-xl bg-linear-to-br from-pink to-cyan py-3 text-sm font-bold text-white shadow-[0_4px_20px_rgba(230,38,122,0.3)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_6px_30px_rgba(230,38,122,0.5)]"
       >
         Comprar
-      </button>
+      </a>
     </div>
   );
 }
@@ -125,16 +126,6 @@ export default function Ingressos() {
           ))}
         </div>
 
-        <div className="text-center opacity-80">
-          <p className="mb-3">
-            Pagamento seguro via <strong>Mercado Pago</strong>
-          </p>
-          <div className="flex flex-wrap justify-center gap-6 max-sm:flex-col max-sm:items-center max-sm:gap-3">
-            <span className="rounded-full bg-white/10 px-5 py-2 text-sm">💳 Cartão de Crédito</span>
-            <span className="rounded-full bg-white/10 px-5 py-2 text-sm">📱 PIX</span>
-            <span className="rounded-full bg-white/10 px-5 py-2 text-sm">📄 Boleto</span>
-          </div>
-        </div>
       </div>
     </section>
   );

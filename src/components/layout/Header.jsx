@@ -4,12 +4,12 @@ import { useState, useEffect } from "react";
 import { cn } from "@/lib/cn";
 
 const NAV_LINKS = [
-  { href: "#home", label: "Início" },
-  { href: "#sobre", label: "Sobre" },
-  { href: "#atracoes", label: "Atrações" },
-  { href: "#ingressos", label: "Ingressos" },
-  { href: "#local", label: "Local" },
-  { href: "#anteriores", label: "Anteriores" },
+  { href: "/#home", label: "Início" },
+  { href: "/#sobre", label: "Sobre" },
+  { href: "/#atracoes", label: "Atrações" },
+  { href: "/#ingressos", label: "Ingressos" },
+  { href: "/#local", label: "Local" },
+  { href: "/#anteriores", label: "Anteriores" },
 ];
 
 export default function Header() {
@@ -46,7 +46,7 @@ export default function Header() {
       )}
     >
       <nav className="mx-auto flex max-w-[1200px] items-center justify-between px-6 h-[72px]">
-        <a href="#" className="shrink-0 font-heading text-2xl font-bold leading-tight md:text-3xl">
+        <a href="/" className="shrink-0 font-heading text-2xl font-bold leading-tight md:text-3xl">
           <span className="text-purple">Bereguedê</span>{" "}
           <span className="text-pink">e Afins</span>
         </a>
@@ -98,7 +98,9 @@ export default function Header() {
           ))}
           <li>
             <a
-              href="#ingressos"
+              href="https://shotgun.live/pt-br/events/curumin-cabuloso-gil-dj-roger-n-roll"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={handleLinkClick}
               className="block bg-linear-to-br from-pink to-purple text-white font-bold text-sm px-6 py-2.5 rounded-2xl transition-all duration-200 hover:opacity-90 hover:-translate-y-0.5 text-center max-md:mt-2"
             >
