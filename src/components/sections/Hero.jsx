@@ -1,8 +1,9 @@
 import Image from "next/image";
-import { EVENT } from "@/lib/constants";
+import { EVENT, TICKETS } from "@/lib/constants";
 import AnimatedText from "@/components/ui/AnimatedText";
 
 export default function Hero() {
+  const ticketsAvailable = TICKETS.length > 0 || !!EVENT.ticketUrl;
   return (
     <section
       id="home"
@@ -73,12 +74,12 @@ export default function Hero() {
         {/* Botão CTA */}
         <div className="animate-fade-up-3">
           <a
-            href="https://shotgun.live/pt-br/events/curumin-cabuloso-gil-dj-roger-n-roll"
-            target="_blank"
-            rel="noopener noreferrer"
+            href={EVENT.ticketUrl || "#ingressos"}
+            target={EVENT.ticketUrl ? "_blank" : undefined}
+            rel={EVENT.ticketUrl ? "noopener noreferrer" : undefined}
             className="inline-flex items-center gap-2 rounded-2xl bg-linear-to-br from-pink to-purple px-8 py-3.5 text-base font-bold text-white shadow-[0_4px_20px_rgba(230,38,122,0.35)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_6px_30px_rgba(230,38,122,0.5)] animate-pulse-glow md:px-10 md:py-4.5 md:text-lg"
           >
-            Garanta seu Ingresso
+            {ticketsAvailable ? "Garanta seu Ingresso" : "Anúncio em breve"}
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>

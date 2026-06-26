@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { EVENT, TICKETS } from "@/lib/constants";
 import { cn } from "@/lib/cn";
 
 const NAV_LINKS = [
@@ -15,6 +16,7 @@ const NAV_LINKS = [
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const ticketsAvailable = TICKETS.length > 0 || !!EVENT.ticketUrl;
 
   useEffect(() => {
     function onScroll() {
@@ -98,13 +100,13 @@ export default function Header() {
           ))}
           <li>
             <a
-              href="https://shotgun.live/pt-br/events/curumin-cabuloso-gil-dj-roger-n-roll"
-              target="_blank"
-              rel="noopener noreferrer"
+              href={EVENT.ticketUrl || "/#ingressos"}
+              target={EVENT.ticketUrl ? "_blank" : undefined}
+              rel={EVENT.ticketUrl ? "noopener noreferrer" : undefined}
               onClick={handleLinkClick}
               className="block bg-linear-to-br from-pink to-purple text-white font-bold text-sm px-6 py-2.5 rounded-2xl transition-all duration-200 hover:opacity-90 hover:-translate-y-0.5 text-center max-md:mt-2"
             >
-              Comprar Ingresso
+              {ticketsAvailable ? "Comprar Ingresso" : "Em breve"}
             </a>
           </li>
         </ul>

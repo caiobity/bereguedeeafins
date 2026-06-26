@@ -1,18 +1,18 @@
 export const EVENT = {
   name: "Bereguedê e Afins",
-  date: "2026-05-16T18:00:00-03:00",
-  dateDisplay: "16 de Maio de 2026",
+  date: "2026-09-12T18:00:00-03:00",
+  dateDisplay: "12 de Setembro de 2026",
   dayOfWeek: "Sábado",
-  time: "18h às 01h",
-  gateOpen: "17h",
-  startTime: "18h",
-  location: "Casa de Castro Alves",
-  locationDetail: "Rua do Passo, 52 - Centro Histórico, Salvador - BA, 40301-408",
+  time: "16h às 22h",
+  gateOpen: "15h",
+  startTime: "16h",
+  location: "Clube Fantoches",
+  locationDetail: "Rua Democrata, 10 - Dois de Julho, Salvador - BA",
   dressCode: "Venha como quiser! A vibe é liberdade.",
   description:
     "Uma celebração da brasilidade através da música, da cultura e da festa. Viva mais do que um show!",
   mapEmbedUrl:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.8!2d-38.5108!3d-12.9736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7161b030e1edb4d%3A0x4f4f4f4f4f4f4f4f!2sCasa%20de%20Castro%20Alves!5e0!3m2!1spt-BR!2sbr",
+    "https://www.google.com/maps?q=Clube+Fantoches+Rua+Democrata+10+Dois+de+Julho+Salvador+BA&output=embed",
   contact: {
     email: "bereguedessa@gmail.com",
     whatsapp: "5571996215265",
@@ -20,6 +20,7 @@ export const EVENT = {
   },
   instagram: "bereguedeeafins",
   producao: "Produção independente por @marcia_bity",
+  ticketUrl: "https://shotgun.live/events/bereguede-afins-apresenta-otto-raults",
 };
 
 export const TICKET_CATEGORIES = [
@@ -40,157 +41,46 @@ export const TICKET_CATEGORIES = [
   },
 ];
 
-export const TICKETS = [
-  {
-    id: "2lote-meia",
-    name: "2\u00BA Lote Meia",
-    price: 90,
-    lote: "2\u00BA Lote",
-    category: "meia",
-    benefits: [
-      "Acesso à área do evento",
-      "Shows de todas as atrações",
-    ],
-    featured: false,
-    tag: null,
-  },
-  {
-    id: "2lote-meia-solidaria",
-    name: "2\u00BA Lote Meia Solidária",
-    price: 95,
-    lote: "2\u00BA Lote",
-    category: "meia-solidaria",
-    benefits: [
-      "Acesso à área do evento",
-      "Shows de todas as atrações",
-      "Levar 1kg de alimento",
-    ],
-    featured: false,
-    tag: null,
-  },
-  {
-    id: "3lote-meia",
-    name: "3\u00BA Lote Meia",
-    price: 105,
-    lote: "3\u00BA Lote",
-    category: "meia",
-    benefits: [
-      "Acesso à área do evento",
-      "Shows de todas as atrações",
-    ],
-    featured: false,
-    tag: null,
-  },
-  {
-    id: "3lote-meia-solidaria",
-    name: "3\u00BA Lote Meia Solidária",
-    price: 110,
-    lote: "3\u00BA Lote",
-    category: "meia-solidaria",
-    benefits: [
-      "Acesso à área do evento",
-      "Shows de todas as atrações",
-      "Levar 1kg de alimento",
-    ],
-    featured: true,
-    tag: "Solidário",
-  },
-  {
-    id: "final-meia",
-    name: "Lote Final Meia",
-    price: 120,
-    lote: "Lote Final",
-    category: "meia",
-    benefits: [
-      "Acesso à área do evento",
-      "Shows de todas as atrações",
-    ],
-    featured: false,
-    tag: null,
-  },
-  {
-    id: "final-meia-solidaria",
-    name: "Lote Final Meia Solidária",
-    price: 125,
-    lote: "Lote Final",
-    category: "meia-solidaria",
-    benefits: [
-      "Acesso à área do evento",
-      "Shows de todas as atrações",
-      "Levar 1kg de alimento",
-    ],
-    featured: false,
-    tag: null,
-  },
-  {
-    id: "1lote-inteira",
-    name: "1\u00BA Lote Inteira",
-    price: 150,
-    lote: "1\u00BA Lote",
-    category: "inteira",
-    benefits: [
-      "Acesso à área do evento",
-      "Shows de todas as atrações",
-    ],
-    featured: true,
-    tag: "Disponível",
-  },
-  {
-    id: "2lote-inteira",
-    name: "2\u00BA Lote Inteira",
-    price: 180,
-    lote: "2\u00BA Lote",
-    category: "inteira",
-    benefits: [
-      "Acesso à área do evento",
-      "Shows de todas as atrações",
-    ],
-    featured: false,
-    tag: null,
-  },
-  {
-    id: "3lote-inteira",
-    name: "3\u00BA Lote Inteira",
-    price: 210,
-    lote: "3\u00BA Lote",
-    category: "inteira",
-    benefits: [
-      "Acesso à área do evento",
-      "Shows de todas as atrações",
-    ],
-    featured: false,
-    tag: null,
-  },
-];
+export const TICKETS = [];
 
 export const ATTRACTIONS = [
   {
-    name: "Curumin",
+    name: "Otto",
     role: "Show ao vivo",
-    description: "Luciano Nakata Albuquerque, o Curumin, é multi-instrumentista paulistano que mistura samba, funk, jazz, hip hop e eletrônico numa sonoridade única da MPB contemporânea.",
+    description: "",
     headliner: true,
-    instagram: "curumineosaipins",
-    image: "/curumin.jpeg",
+    instagrams: ["ottomatopeia"],
+    image: "/eventos/Foto Atração Otto.png",
   },
   {
-    name: "Cabuloso Gil",
-    role: "Cabuloso Trio",
-    description: "O Cabuloso Trio apresenta o projeto Cabuloso Gil — um tributo vibrante ao legado de Gilberto Gil, revisitando e homenageando o vasto repertório de um dos maiores mestres da música brasileira.",
-    headliner: true,
-    instagram: "cabulosotrio",
-    image: "/cabuloso trio.jpeg",
-  },
-  {
-    name: "DJ Roger N Roll",
-    role: "DJ Set",
-    description: "DJ residente da cena alternativa de Salvador, Roger N Roll transita entre o brasileiro e o universal, de Pixinguinha a Nirvana, criando sets ecléticos e dançantes.",
+    name: "RAULTS",
+    role: "Show ao vivo",
+    description: "",
     headliner: false,
-    instagram: "rogernroll",
-    image: "/roger n roll.jpeg",
+    instagrams: ["prince.addamo", "irmaocarlospsicofunk", "sindei.rasta"],
+    image: "/eventos/Foto Atração Raults.png",
   },
 ];
 
 export const PAST_EVENTS = [
+  {
+    slug: "curumin-cabuloso-gil-2026-05",
+    attractions: ["Curumin", "Cabuloso Gil", "DJ Roger N Roll"],
+    date: "16/05/2026",
+    year: "2026",
+    location: "Casa de Castro Alves",
+    summary: "",
+    banner: "/eventos/Banner Curumin, Cabuloso Gil e DJ Roger n Roll 1.png",
+    images: [
+      "/eventos/Curumin, Cabuloso Gil e DJ Roger n Roll 2.jpeg",
+      "/eventos/Curumin, Cabuloso Gil e DJ Roger n Roll 3.jpeg",
+    ],
+    videos: [
+      "/eventos/Curumin, Cabuloso Gil e DJ Roger n Roll 4.mp4",
+      "/eventos/Curumin, Cabuloso Gil e DJ Roger n Roll 5.mp4",
+      "/eventos/Curumin, Cabuloso Gil e DJ Roger n Roll 6.mp4",
+    ],
+  },
   {
     slug: "banda-eddie-cabuloso-trio-2023-09",
     attractions: ["Banda Eddie", "Cabuloso Trio", "DJ Secretinho", "DJ Niti Seletor"],
@@ -268,10 +158,17 @@ export const PAST_EVENTS = [
     year: "2025",
     location: "",
     summary: "",
+    banner: "/eventos/Banner Cabuloso Gil e JP Castelhano 12.12.2025.jpeg",
     images: [
       "/eventos/Cabuloso Gil e JP Castelhano 12.12.2025 1.JPG",
       "/eventos/Cabuloso Gil e JP Castelhano 12.12.2025 2.JPG",
       "/eventos/Cabuloso Gil e JP Castelhano 12.12.2025 3.JPG",
+      "/eventos/Cabuloso Gil e JP Castelhano 12.12.2025 4.JPG",
+      "/eventos/Cabuloso Gil e JP Castelhano 12.12.2025 5.JPG",
+      "/eventos/Cabuloso Gil e JP Castelhano 12.12.2025 6.JPG",
+      "/eventos/Cabuloso Gil e JP Castelhano 12.12.2025 7.JPG",
+      "/eventos/Cabuloso Gil e JP Castelhano 12.12.2025 8.JPG",
+      "/eventos/Cabuloso Gil e JP Castelhano 12.12.2025 9.JPG",
     ],
     videos: [],
   },

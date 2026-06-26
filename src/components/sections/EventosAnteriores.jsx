@@ -2,7 +2,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { PAST_EVENTS } from "@/lib/constants";
 
+// Sort events most recent first based on "DD/MM/YYYY" date string
+const SORTED_EVENTS = [...PAST_EVENTS].sort((a, b) => {
+  const [da, ma, ya] = a.date.split("/").map(Number);
+  const [db, mb, yb] = b.date.split("/").map(Number);
+  return new Date(yb, mb - 1, db) - new Date(ya, ma - 1, da);
+});
+
 function EventCard({ event }) {
+  const coverSrc = event.banner ?? event.images?.[0];
+
   return (
     <Link
       href={`/eventos/${event.slug}`}
@@ -13,31 +22,32 @@ function EventCard({ event }) {
         {event.year}
       </div>
 
-      {/* Cover photo (banner if available, else first photo) */}
-      <div className={`relative h-52 overflow-hidden ${event.banner ? "bg-linear-to-br from-purple to-pink" : ""}`}>
-        <Image
-          src={event.banner ?? event.images[0]}
-          alt={event.attractions.join(", ")}
-          fill
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          className={`transition-transform duration-500 group-hover:scale-105 ${
-            event.banner ? "object-contain" : "object-cover object-center"
-          }`}
-        />
-        {!event.banner && (
-          <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" />
-        )}
-
-        {/* Photo count badge */}
-        {event.images.length > 1 && (
-          <div className="absolute bottom-3 left-3 flex items-center gap-1.5 rounded-full bg-black/50 px-2.5 py-1 text-[0.65rem] font-semibold text-white backdrop-blur-sm">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+      {/* Cover photo (banner if available, else first photo, else placeholder) */}
+      <div className={`relative h-52 overflow-hidden ${event.banner || !coverSrc ? "bg-linear-to-br from-purple to-pink" : ""}`}>
+        {coverSrc ? (
+          <Image
+            src={coverSrc}
+            alt={event.attractions.join(", ")}
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className={`transition-transform duration-500 group-hover:scale-105 ${
+              event.banner ? "object-contain" : "object-cover object-center"
+            }`}
+          />
+        ) : (
+          <div className="flex h-full flex-col items-center justify-center gap-2 text-white">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
               <rect x="3" y="3" width="18" height="18" rx="2" />
               <circle cx="8.5" cy="8.5" r="1.5" />
               <path d="M21 15l-5-5L5 21" />
             </svg>
-            {event.images.length} fotos
+            <span className="text-xs font-semibold uppercase tracking-wider opacity-80">
+              Fotos em breve
+            </span>
           </div>
+        )}
+        {!event.banner && coverSrc && (
+          <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" />
         )}
 
         {/* "Ver mais" overlay on hover */}
@@ -79,7 +89,7 @@ export default function EventosAnteriores() {
         </p>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {PAST_EVENTS.map((event) => (
+          {SORTED_EVENTS.map((event) => (
             <EventCard key={event.slug} event={event} />
           ))}
         </div>

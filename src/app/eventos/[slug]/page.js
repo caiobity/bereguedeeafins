@@ -75,24 +75,26 @@ export default async function EventoPage({ params }) {
             </div>
           </div>
         ) : (
-          <div className="relative h-[40vh] min-h-[280px] w-full overflow-hidden bg-gray-900 md:h-[55vh]">
+          <div className={`relative w-full overflow-hidden ${event.images?.[0] ? "h-[40vh] min-h-[280px] bg-gray-900 md:h-[55vh]" : "bg-linear-to-br from-purple via-purple to-pink py-16 md:py-24"}`}>
             {event.images?.[0] && (
-              <Image
-                src={event.images[0]}
-                alt={event.attractions.join(", ")}
-                fill
-                sizes="100vw"
-                className="object-cover object-center"
-                priority
-              />
+              <>
+                <Image
+                  src={event.images[0]}
+                  alt={event.attractions.join(", ")}
+                  fill
+                  sizes="100vw"
+                  className="object-cover object-center"
+                  priority
+                />
+                <div className="absolute inset-0 bg-linear-to-t from-black/85 via-black/40 to-black/30" />
+              </>
             )}
-            <div className="absolute inset-0 bg-linear-to-t from-black/85 via-black/40 to-black/30" />
 
-            <div className="absolute inset-0 flex items-end">
+            <div className={event.images?.[0] ? "absolute inset-0 flex items-end" : "relative"}>
               <div className="mx-auto w-full max-w-[1100px] px-6 pb-10">
                 <Link
                   href="/#anteriores"
-                  className="mb-5 flex w-fit items-center gap-1.5 text-sm font-semibold text-white/90 transition-colors hover:text-pink"
+                  className="mb-5 flex w-fit items-center gap-1.5 text-sm font-semibold text-white/90 transition-colors hover:text-yellow"
                 >
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                     <path d="M15 18l-6-6 6-6" />
