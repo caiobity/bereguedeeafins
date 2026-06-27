@@ -3,7 +3,7 @@ import { EVENT } from "@/lib/constants";
 const DETAILS = [
   {
     icon: "📍",
-    title: "Endereco",
+    title: "Endereço",
     lines: [EVENT.location, EVENT.locationDetail],
   },
   {
@@ -13,8 +13,8 @@ const DETAILS = [
   },
   {
     icon: "🕐",
-    title: "Horario",
-    lines: [`Abertura dos portoes: ${EVENT.gateOpen}`, `Inicio: ${EVENT.startTime}`],
+    title: "Horário",
+    lines: [`Abertura dos portões: ${EVENT.gateOpen}`, `Início: ${EVENT.startTime}`],
   },
   {
     icon: "👔",

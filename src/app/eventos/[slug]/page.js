@@ -142,16 +142,26 @@ export default async function EventoPage({ params }) {
             </div>
           )}
 
-          {/* Summary */}
+          {/* Summary card */}
           {event.summary && (
             <section className="mb-12">
-              <h2 className="mb-4 text-2xl font-bold text-purple md:text-3xl">
-                Como foi a festa
-              </h2>
-              <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed text-pretty">
-                {event.summary.split("\n\n").map((p, i) => (
-                  <p key={i} className="mb-4">{p}</p>
-                ))}
+              <div className="relative overflow-hidden rounded-3xl border border-yellow/50 bg-yellow/[0.08] p-7 shadow-sm md:p-10">
+                {/* Pequeno detalhe decorativo no canto */}
+                <div className="absolute -top-12 -right-12 size-32 rounded-full bg-pink/10 blur-2xl" />
+
+                <div className="relative">
+                  <div className="mb-5 flex items-center gap-2">
+                    <span className="inline-block size-2 rounded-full bg-pink" />
+                    <span className="text-xs font-bold uppercase tracking-wider text-pink">
+                      Sobre o evento
+                    </span>
+                  </div>
+                  <div className="space-y-4 leading-relaxed text-gray-700 text-pretty md:text-[1.05rem]">
+                    {event.summary.split("\n\n").map((p, i) => (
+                      <p key={i}>{p}</p>
+                    ))}
+                  </div>
+                </div>
               </div>
             </section>
           )}

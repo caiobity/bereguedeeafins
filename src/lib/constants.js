@@ -1,10 +1,10 @@
 export const EVENT = {
   name: "Bereguedê e Afins",
-  date: "2026-09-12T18:00:00-03:00",
-  dateDisplay: "12 de Setembro de 2026",
+  date: "2026-09-26T16:00:00-03:00",
+  dateDisplay: "26 de Setembro de 2026",
   dayOfWeek: "Sábado",
   time: "16h às 22h",
-  gateOpen: "15h",
+  gateOpen: "16h",
   startTime: "16h",
   location: "Clube Fantoches",
   locationDetail: "Rua Democrata, 10 - Dois de Julho, Salvador - BA",
@@ -68,8 +68,8 @@ export const PAST_EVENTS = [
     attractions: ["Curumin", "Cabuloso Gil", "DJ Roger N Roll"],
     date: "16/05/2026",
     year: "2026",
-    location: "Casa de Castro Alves",
-    summary: "",
+    location: "Casa de Castro Alves — Centro Histórico, Salvador",
+    summary: "A Bereguedê & Afins trouxe para Salvador o retorno de Curumin aos palcos em formato trio especial, ao lado de Saulo Duarte (guitarra) e Aline Falcão (teclado), revisitando seus maiores sucessos e canções do álbum Selva de Pedra. Um show pulsante, de intensidade rítmica e sonoridade urbana profundamente brasileira.\n\nA noite também recebeu o Cabuloso Gil — tributo ao mestre Gilberto Gil — e, pela primeira vez, o DJ Roger N Roll, residente há mais de 20 anos da Borracharia e referência nacional com seu estilo open format.\n\nTudo na Casa de Castro Alves, sobrado do século XVIII no Centro Histórico. Apoio: Poró, Café e Cana, Casa de Castro Alves e Athila Sonorização.",
     banner: "/eventos/Banner Curumin, Cabuloso Gil e DJ Roger n Roll 1.png",
     images: [
       "/eventos/Curumin, Cabuloso Gil e DJ Roger n Roll 2.jpeg",
@@ -116,8 +116,8 @@ export const PAST_EVENTS = [
     attractions: ["Di Melo", "Miss Sueter", "DJ Secretinho"],
     date: "24/05/2025",
     year: "2025",
-    location: "",
-    summary: "",
+    location: "Casa de Castro Alves — Centro Histórico, Salvador",
+    summary: "Na 5ª edição da Bereguedê & Afins, Salvador recebeu um show inédito de Di Melo — recifense com mais de 50 anos de carreira, presença marcante em festivais como Festival de Inverno de Garanhuns, Psicodália e MADA. O cantor, compositor, poeta e soulman se apresentou acompanhado da banda Além do Caos, formada por artistas da cena alternativa soteropolitana que transitam pelo Afro, Samba, Ska e Samba Rock.\n\nA abertura ficou por conta da Miss Suéter, banda reativada em 2024 que resgata a música brasileira das décadas de 70 e 80, reunindo oito artistas da cena baiana. DJ Secretinho fechou a noite misturando Afrobeats, Funky & Soul, Cumbia e brasilidades.\n\nO evento aconteceu na Casa de Castro Alves, sobrado do século XVIII no Centro Histórico. Apoio: Poró, Café e Cana, La Lupa e Atila Sonorização.",
     banner: "/eventos/Banner Di Melo e Miss Sueter 24.05.2025 .png",
     images: [
       "/eventos/Di Melo e Miss Sueter 24.05.2025.jpeg",
@@ -141,8 +141,8 @@ export const PAST_EVENTS = [
     attractions: ["Banda Eddie", "Banda Cajá", "DJ Pureza"],
     date: "06/09/2025",
     year: "2025",
-    location: "",
-    summary: "",
+    location: "Casa de Castro Alves — Centro Histórico, Salvador",
+    summary: "Em celebração aos 2 anos da Bereguedê & Afins, a Banda Eddie voltou para um show especial que revisitou todas as fases do grupo, com músicas inéditas do novo trabalho Carnaval Chanson. Groove descontraído e atmosfera vibrante — como o clima das ruas do carnaval de Olinda.\n\nA 7ª edição também trouxe a Banda Cajá (criada em 2024), mesclando psicodelia setentista à tradição do Carnaval baiano, com Bruno Aranha, Carla Suzart, Victor Brazil, Tarcísio Santos e Guigga. DJ Pureza fechou passeando pela Música Negra Periférica — Samba, Afrobeats, Dancehall e Dembow.\n\nO evento aconteceu na Casa de Castro Alves, sobrado do século XVIII no Centro Histórico. Apoio: Poró e Café e Cana.",
     banner: "/eventos/Banner Banda Eddie e Banda Cajá 06.09.2025.jpg",
     images: [
       "/eventos/Banda Eddie e Banda Cajá 06.09.2025 1.jpeg",
@@ -156,8 +156,8 @@ export const PAST_EVENTS = [
     attractions: ["Cabuloso Gil", "JP Castelhano", "DJ Rafa Xavier"],
     date: "12/12/2025",
     year: "2025",
-    location: "",
-    summary: "",
+    location: "Casa de Castro Alves — Centro Histórico, Salvador",
+    summary: "Na 8ª edição da Bereguedê & Afins, o Cabuloso Trio subiu ao palco com seu projeto Cabuloso Gil — homenagem a um dos maiores mestres da nossa música. Uma noite de bons encontros e energia viva, celebrando o legado de quem ensinou que \"andar com fé\" é mais que um refrão.\n\nPela primeira vez no line up, a festa recebeu JP Castelhano em formato quarteto com o BOKAGROOVE (Flavinho Drums, Marcelo Rocha e Normando Mendes), com composições próprias e releituras de Gil, Jorge Ben, Bob Marley e Beatles. Para fechar, Rafa Xavier — DJ e pesquisador musical — comandou um set transitando do clássico ao contemporâneo dos ritmos brasileiros misturados a batidas eletrônicas.\n\nO evento aconteceu na Casa de Castro Alves, sobrado do século XVIII no Centro Histórico de Salvador.",
     banner: "/eventos/Banner Cabuloso Gil e JP Castelhano 12.12.2025.jpeg",
     images: [
       "/eventos/Cabuloso Gil e JP Castelhano 12.12.2025 1.JPG",
@@ -184,11 +184,6 @@ export const FAQ_ITEMS = [
     question: "O que é a meia solidária?",
     answer:
       "A meia solidária é um ingresso com valor próximo à meia-entrada, mas que inclui a doação de 1kg de alimento não perecível no dia do evento.",
-  },
-  {
-    question: "Posso parcelar o ingresso?",
-    answer:
-      "Sim! Via cartão de crédito, é possível parcelar em até 3x sem juros pelo Mercado Pago.",
   },
   {
     question: "Qual a política de cancelamento?",

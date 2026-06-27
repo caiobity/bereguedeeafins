@@ -5,7 +5,7 @@ const QUICK_LINKS = [
   { href: "/#atracoes", label: "Atrações" },
   { href: "/#ingressos", label: "Ingressos" },
   { href: "/#local", label: "Local" },
-  { href: "/#anteriores", label: "Anteriores" },
+  { href: "/#anteriores", label: "Eventos Anteriores" },
   { href: "/#faq", label: "FAQ" },
 ];
 

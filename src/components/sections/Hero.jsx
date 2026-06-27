@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { EVENT, TICKETS } from "@/lib/constants";
 import AnimatedText from "@/components/ui/AnimatedText";
+import FloatingLogos from "./FloatingLogos";
 
 export default function Hero() {
   const ticketsAvailable = TICKETS.length > 0 || !!EVENT.ticketUrl;
@@ -8,29 +9,10 @@ export default function Hero() {
     <section
       id="home"
       className="relative flex min-h-dvh items-center justify-center overflow-hidden px-6 pt-20 pb-12"
-      style={{ background: "linear-gradient(to bottom, #f2d620 0%, #f2d620 78%, #e6267a 95%, #c0185f 100%)" }}
+      style={{ background: "#f2d620" }}
     >
-      {/* Orbs grandes de fundo */}
-      <div className="pointer-events-none absolute -top-1/2 -right-1/5 size-[600px] rounded-full bg-[radial-gradient(circle,rgba(230,38,122,0.18)_0%,transparent_70%)] animate-float" />
-      <div className="pointer-events-none absolute -bottom-[30%] -left-[10%] size-[500px] rounded-full bg-[radial-gradient(circle,rgba(58,33,120,0.12)_0%,transparent_70%)] animate-float-reverse" />
-      <div className="pointer-events-none absolute top-[20%] left-[5%] size-[280px] rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.12)_0%,transparent_70%)] animate-float-reverse" />
-      <div className="pointer-events-none absolute bottom-[15%] right-[5%] size-[220px] rounded-full bg-[radial-gradient(circle,rgba(230,38,122,0.12)_0%,transparent_70%)] animate-float" style={{ animationDelay: '3s' }} />
-
-      {/* Bolinhas flutuantes */}
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute top-[12%] left-[8%]   size-3 rounded-full bg-pink/30   animate-float"         style={{ animationDelay: '0s',   animationDuration: '7s'  }} />
-        <div className="absolute top-[22%] left-[16%]  size-2 rounded-full bg-white/40  animate-float-reverse" style={{ animationDelay: '1.2s', animationDuration: '5s'  }} />
-        <div className="absolute top-[8%]  left-[28%]  size-4 rounded-full bg-purple/20 animate-float"         style={{ animationDelay: '2s',   animationDuration: '9s'  }} />
-        <div className="absolute top-[10%] right-[9%]  size-3 rounded-full bg-pink/25   animate-float-reverse" style={{ animationDelay: '0.5s', animationDuration: '6s'  }} />
-        <div className="absolute top-[20%] right-[20%] size-2 rounded-full bg-white/35  animate-float"         style={{ animationDelay: '1.8s', animationDuration: '8s'  }} />
-        <div className="absolute top-[6%]  right-[32%] size-5 rounded-full bg-purple/15 animate-float-reverse" style={{ animationDelay: '3s',   animationDuration: '10s' }} />
-        <div className="absolute top-[48%] left-[4%]   size-2 rounded-full bg-pink/20   animate-float"         style={{ animationDelay: '2.5s', animationDuration: '7s'  }} />
-        <div className="absolute top-[58%] left-[11%]  size-3 rounded-full bg-white/25  animate-float-reverse" style={{ animationDelay: '0.8s', animationDuration: '9s'  }} />
-        <div className="absolute top-[42%] right-[5%]  size-4 rounded-full bg-purple/15 animate-float"         style={{ animationDelay: '1.2s', animationDuration: '6s'  }} />
-        <div className="absolute top-[60%] right-[13%] size-2 rounded-full bg-pink/30   animate-float-reverse" style={{ animationDelay: '3.5s', animationDuration: '8s'  }} />
-        <div className="absolute top-[75%] left-[25%]  size-3 rounded-full bg-white/20  animate-float"         style={{ animationDelay: '1s',   animationDuration: '7s'  }} />
-        <div className="absolute top-[78%] right-[28%] size-2 rounded-full bg-purple/25 animate-float-reverse" style={{ animationDelay: '2.2s', animationDuration: '5s'  }} />
-      </div>
+      {/* Logos flutuantes com bounce estilo DVD logo */}
+      <FloatingLogos />
 
       {/* Sparkles ✦ */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden select-none">
@@ -46,10 +28,10 @@ export default function Hero() {
         <Image
           src="/logo.png"
           alt="Bereguedê e Afins"
-          width={350}
-          height={350}
+          width={450}
+          height={450}
           priority
-          className="w-[min(180px,42vw)] h-auto drop-shadow-[0_8px_30px_rgba(0,0,0,0.15)] animate-logo-entry md:w-[min(280px,28vw)]"
+          className="w-[min(250px,58vw)] h-auto drop-shadow-[0_8px_30px_rgba(0,0,0,0.15)] animate-logo-entry md:w-[min(380px,36vw)]"
         />
 
         {/* Badge de data */}
@@ -88,7 +70,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="pointer-events-none absolute bottom-7 left-1/2 -translate-x-1/2 animate-arrow-bounce">
+      <div className="pointer-events-none absolute bottom-7 left-1/2 z-20 -translate-x-1/2 animate-arrow-bounce">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-purple-dark/60">
           <path d="M12 5v14M5 12l7 7 7-7" />
         </svg>

@@ -94,11 +94,11 @@ export default function Ingressos() {
         <h2 className="mb-2 text-center text-4xl text-white md:text-5xl text-balance">
           Ingressos
         </h2>
-        <p className="mb-8 text-center text-white/70 text-pretty">
+        <p className="mb-10 text-center text-white/70 text-pretty">
           {hasLocalTickets
             ? "Escolha o tipo e o lote ideal para você"
             : hasExternalTickets
-            ? "Garanta o seu pelo nosso parceiro Shotgun"
+            ? "Garanta seu ingresso pelo PIX ou pelo site Shotgun"
             : "Vendas em breve"}
         </p>
 
@@ -136,24 +136,55 @@ export default function Ingressos() {
             </div>
           </>
         ) : hasExternalTickets ? (
-          <div className="mx-auto max-w-xl rounded-3xl border-2 border-white/20 bg-white/[0.08] px-8 py-12 text-center shadow-lg backdrop-blur-sm">
-            <div className="mb-4 text-5xl">🎟️</div>
-            <h3 className="mb-2 text-2xl font-bold text-white">
-              Ingressos disponíveis
-            </h3>
-            <p className="mb-7 text-white/75 text-pretty">
-              A venda é feita pelo Shotgun, plataforma oficial de ingressos para o evento.
-            </p>
+          <div className="mx-auto grid max-w-3xl gap-5 sm:grid-cols-2">
+            {/* PIX */}
+            <a
+              href={`https://wa.me/${EVENT.contact.whatsapp}?text=${encodeURIComponent(
+                "Olá! Tenho interesse em garantir meu ingresso para Bereguedê & Afins via PIX."
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex flex-col items-center rounded-3xl border-2 border-white/20 bg-white/[0.08] p-7 text-center shadow-lg backdrop-blur-sm transition-all duration-200 hover:-translate-y-1 hover:border-yellow/60 hover:bg-white/[0.12] hover:shadow-xl"
+            >
+              <div className="mb-3 text-cyan">
+                <svg width="44" height="44" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true">
+                  <path d="M242.4 292.5C247.8 287.1 257.1 287.1 262.5 292.5L339.5 369.5C353.7 383.7 372.6 391.5 392.6 391.5H407.7L310.6 488.6C280.3 518.1 231.2 518.1 200.8 488.6L103.3 391.2H112.6C132.6 391.2 151.5 383.4 165.7 369.2L242.4 292.5zM262.5 218.9C256.1 224.4 247.9 224.4 242.5 218.9L165.7 142.2C151.5 127.1 132.6 120.2 112.6 120.2H103.3L200.7 22.76C231.1-7.586 280.3-7.586 310.6 22.76L407.8 119.9H392.6C372.6 119.9 353.7 127.7 339.5 141.9L262.5 218.9zM112.6 142.7C126.4 142.7 139.1 148.3 149.7 158.1L226.5 234.8C233.4 241.7 242.5 245.2 251.5 245.2C260.5 245.2 269.6 241.7 276.4 234.8L353.5 157.8C363.2 148.1 376.8 142.5 390.7 142.5H429.6L488.6 201.4C518.9 231.8 518.9 280.9 488.6 311.2L429.6 370.2H390.7C376.8 370.2 363.2 364.6 353.5 354.9L276.5 277.9C263.1 264.6 239.9 264.6 226.6 277.9L149.7 354.8C139.1 364.6 126.4 370.2 112.6 370.2H78.81L22.76 314.2C-7.586 283.8-7.586 234.7 22.76 204.4L78.81 148.3L112.6 142.7z"/>
+                </svg>
+              </div>
+              <h3 className="mb-1 text-xl font-bold text-white">
+                Pagar com PIX
+              </h3>
+              <p className="mb-5 text-sm text-white/70 text-pretty">
+                Fale com a gente no Whatsapp para efetuar o pagamento
+              </p>
+              <span className="mt-auto inline-flex items-center gap-1.5 rounded-2xl bg-linear-to-br from-cyan to-purple px-5 py-2.5 text-sm font-bold text-white shadow-md transition-all duration-200 group-hover:-translate-y-0.5 group-hover:shadow-lg">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M17.6 6.3a7.7 7.7 0 00-5.6-2.3 7.7 7.7 0 00-5.6 2.3 7.7 7.7 0 00-2.3 5.6c0 1.5.4 2.9 1.1 4.1L4 20.8l4.9-1.3a7.7 7.7 0 003.1.6 7.7 7.7 0 005.6-2.3 7.7 7.7 0 002.3-5.6c0-2.1-.8-4.1-2.3-5.6zm-5.6 12.3c-1 0-2-.3-2.9-.7l-.2-.1-3 .8.8-2.9-.1-.2a6.4 6.4 0 01-1-3.5 6.5 6.5 0 016.4-6.4c1.7 0 3.3.7 4.5 1.9a6.4 6.4 0 011.9 4.5 6.5 6.5 0 01-6.4 6.6z"/>
+                </svg>
+                WhatsApp
+              </span>
+            </a>
+
+            {/* Shotgun */}
             <a
               href={EVENT.ticketUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-2xl bg-linear-to-br from-pink to-yellow px-8 py-3.5 text-base font-extrabold text-purple-dark shadow-[0_4px_20px_rgba(230,38,122,0.35)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_6px_30px_rgba(230,38,122,0.5)] md:px-10 md:py-4 md:text-lg"
+              className="group flex flex-col items-center rounded-3xl border-2 border-white/20 bg-white/[0.08] p-7 text-center shadow-lg backdrop-blur-sm transition-all duration-200 hover:-translate-y-1 hover:border-pink/60 hover:bg-white/[0.12] hover:shadow-xl"
             >
-              Comprar no Shotgun
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                <path d="M7 17L17 7M17 7H9M17 7v8" />
-              </svg>
+              <div className="mb-3 text-4xl">🎟️</div>
+              <h3 className="mb-1 text-xl font-bold text-white">
+                Comprar no Shotgun
+              </h3>
+              <p className="mb-5 text-sm text-white/70 text-pretty">
+                Plataforma oficial de venda online com cartão de crédito.
+              </p>
+              <span className="mt-auto inline-flex items-center gap-1.5 rounded-2xl bg-linear-to-br from-pink to-yellow px-5 py-2.5 text-sm font-bold text-purple-dark shadow-md transition-all duration-200 group-hover:-translate-y-0.5 group-hover:shadow-lg">
+                Ir para Shotgun
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                  <path d="M7 17L17 7M17 7H9M17 7v8" />
+                </svg>
+              </span>
             </a>
           </div>
         ) : (

@@ -10,7 +10,7 @@ const NAV_LINKS = [
   { href: "/#atracoes", label: "Atrações" },
   { href: "/#ingressos", label: "Ingressos" },
   { href: "/#local", label: "Local" },
-  { href: "/#anteriores", label: "Anteriores" },
+  { href: "/#anteriores", label: "Eventos Anteriores" },
 ];
 
 export default function Header() {
@@ -48,9 +48,9 @@ export default function Header() {
       )}
     >
       <nav className="mx-auto flex max-w-[1200px] items-center justify-between px-6 h-[72px]">
-        <a href="/" className="shrink-0 font-heading text-2xl font-bold leading-tight md:text-3xl">
-          <span className="text-purple">Bereguedê</span>{" "}
-          <span className="text-pink">e Afins</span>
+        <a href="/" className="shrink-0 font-brand text-2xl leading-tight tracking-tight md:text-3xl">
+          <span className="text-purple drop-shadow-[2px_2px_0_rgba(59,189,224,0.6)]">Bereguedê</span>{" "}
+          <span className="text-pink drop-shadow-[2px_2px_0_rgba(59,189,224,0.6)]">e Afins</span>
         </a>
 
         <button

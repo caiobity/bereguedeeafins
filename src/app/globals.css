@@ -21,6 +21,7 @@
   /* Fonts */
   --font-heading: var(--font-heading);
   --font-body: var(--font-body);
+  --font-brand: var(--font-brand);
 
   /* Shadows */
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -100,6 +101,7 @@
   0%, 100% { opacity: 0.2; transform: scale(0.8) rotate(0deg); }
   50%       { opacity: 0.8; transform: scale(1.2) rotate(20deg); }
 }
+
 
 /* Base styles */
 html {
