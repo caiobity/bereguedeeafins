@@ -100,9 +100,7 @@ export default function Header() {
           ))}
           <li>
             <a
-              href={EVENT.ticketUrl || "/#ingressos"}
-              target={EVENT.ticketUrl ? "_blank" : undefined}
-              rel={EVENT.ticketUrl ? "noopener noreferrer" : undefined}
+              href="/#ingressos"
               onClick={handleLinkClick}
               className="block bg-linear-to-br from-pink to-purple text-white font-bold text-sm px-6 py-2.5 rounded-2xl transition-all duration-200 hover:opacity-90 hover:-translate-y-0.5 text-center max-md:mt-2"
             >

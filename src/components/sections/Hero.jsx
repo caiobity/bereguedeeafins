@@ -56,9 +56,7 @@ export default function Hero() {
         {/* Botão CTA */}
         <div className="animate-fade-up-3">
           <a
-            href={EVENT.ticketUrl || "#ingressos"}
-            target={EVENT.ticketUrl ? "_blank" : undefined}
-            rel={EVENT.ticketUrl ? "noopener noreferrer" : undefined}
+            href="#ingressos"
             className="inline-flex items-center gap-2 rounded-2xl bg-linear-to-br from-pink to-purple px-8 py-3.5 text-base font-bold text-white shadow-[0_4px_20px_rgba(230,38,122,0.35)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_6px_30px_rgba(230,38,122,0.5)] animate-pulse-glow md:px-10 md:py-4.5 md:text-lg"
           >
             {ticketsAvailable ? "Garanta seu Ingresso" : "Anúncio em breve"}
