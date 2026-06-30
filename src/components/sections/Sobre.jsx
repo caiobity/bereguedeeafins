@@ -99,7 +99,7 @@ export default function Sobre() {
           </p>
 
           <p className="mt-4 text-base leading-relaxed text-gray-600 text-pretty">
-            Atualmente, a produtora conta com a parceria de Saint Clair, responsável pela operação de bar, equipe de apoio e estrutura de som. Embora não componha a sociedade da produtora, sua colaboração é parte fundamental na realização dos eventos, contribuindo diretamente para a consistência e qualidade das entregas.
+            Atualmente, a produtora conta com a parceria de Saint Clair, responsável pela operação de bar, equipe de apoio e estrutura de som. Sua colaboração é parte fundamental na realização dos eventos, contribuindo diretamente para a consistência e qualidade das entregas.
           </p>
 
           <p className="mt-6 text-lg font-semibold text-purple italic">

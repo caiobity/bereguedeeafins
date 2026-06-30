@@ -123,7 +123,6 @@ export const PAST_EVENTS = [
       "/eventos/Di Melo e Miss Sueter 24.05.2025.jpeg",
       "/eventos/Di Melo e Miss Sueter 24.05.2025 1.jpeg",
       "/eventos/Di Melo e Miss Sueter 24.05.2025 3.jpeg",
-      "/eventos/Di Melo e Miss Sueter 24.05.2025 4.jpeg",
       "/eventos/Di Melo e Miss Sueter 24.05.2025 5.jpeg",
       "/eventos/Di Melo e Miss Sueter 24.05.2025 6.jpeg",
       "/eventos/Di Melo e Miss Sueter 24.05.2025 7.jpeg",
