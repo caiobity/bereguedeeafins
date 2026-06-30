@@ -57,8 +57,8 @@ export const ATTRACTIONS = [
     role: "Show ao vivo",
     description: "",
     headliner: false,
-    instagrams: ["prince.addamo", "irmaocarlospsicofunk", "sindei.rasta"],
-    image: "/eventos/Foto Atração Raults.png",
+    instagrams: ["prince.addamo", "sindei.rasta"],
+    image: "/eventos/Nova Foto Atração RAULTS.jpeg",
   },
 ];
 
@@ -197,6 +197,6 @@ export const FAQ_ITEMS = [
   {
     question: "O pagamento via PIX é seguro?",
     answer:
-      "Sim! Todos os pagamentos são processados pelo Mercado Pago, uma das maiores plataformas de pagamento do Brasil, com criptografia de ponta a ponta.",
+      "Sim! O pagamento via PIX é feito diretamente em contato com a produção do evento pelo WhatsApp. Você fala com a gente, combina os detalhes e recebe a confirmação do ingresso na hora.",
   },
 ];
