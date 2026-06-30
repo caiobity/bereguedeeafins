@@ -21,16 +21,18 @@ const bowlbyOne = Bowlby_One({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://www.bereguedeeafins.com.br"),
   title: "Bereguedê & Afins | Festa em Salvador",
   description:
-    "Bereguedê & Afins - A maior festa de Salvador! Compre seu ingresso online com seguranca.",
-  keywords: "festa, Salvador, Bahia, ingresso, evento, musica, axe, pagode",
+    "Bereguedê & Afins - Uma celebração da brasilidade através da música, da cultura e da festa. 26 de Setembro de 2026 em Salvador.",
+  keywords: "festa, Salvador, Bahia, ingresso, evento, musica, MPB, Otto, RAULTS, bereguede, afins",
   openGraph: {
     title: "Bereguedê & Afins | Festa em Salvador",
     description:
-      "A festa que mistura todos os ritmos de Salvador num so lugar!",
+      "Otto + RAULTS — 26 de Setembro de 2026 no Clube Fantoches. Viva mais do que um show!",
     locale: "pt_BR",
     type: "website",
+    siteName: "Bereguedê & Afins",
   },
 };
 
