@@ -50,7 +50,7 @@ export default function Header() {
       <nav className="mx-auto flex max-w-[1200px] items-center justify-between px-6 h-[72px]">
         <a href="/" className="shrink-0 font-brand text-2xl leading-tight tracking-tight md:text-3xl">
           <span className="text-purple drop-shadow-[2px_2px_0_rgba(59,189,224,0.6)]">Bereguedê</span>{" "}
-          <span className="text-pink drop-shadow-[2px_2px_0_rgba(59,189,224,0.6)]">e Afins</span>
+          <span className="text-pink drop-shadow-[2px_2px_0_rgba(59,189,224,0.6)]">& Afins</span>
         </a>
 
         <button

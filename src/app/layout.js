@@ -21,12 +21,12 @@ const bowlbyOne = Bowlby_One({
 });
 
 export const metadata = {
-  title: "Bereguedê e Afins | Festa em Salvador",
+  title: "Bereguedê & Afins | Festa em Salvador",
   description:
-    "Bereguedê e Afins - A maior festa de Salvador! Compre seu ingresso online com seguranca.",
+    "Bereguedê & Afins - A maior festa de Salvador! Compre seu ingresso online com seguranca.",
   keywords: "festa, Salvador, Bahia, ingresso, evento, musica, axe, pagode",
   openGraph: {
-    title: "Bereguedê e Afins | Festa em Salvador",
+    title: "Bereguedê & Afins | Festa em Salvador",
     description:
       "A festa que mistura todos os ritmos de Salvador num so lugar!",
     locale: "pt_BR",

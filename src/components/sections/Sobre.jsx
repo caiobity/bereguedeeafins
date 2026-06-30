@@ -30,7 +30,7 @@ const CARDS = [
     gradient: "from-pink to-yellow",
     title: "Experiência",
     description:
-      "Mais do que eventos, a Bereguedê e Afins cria encontros. Espaços onde música, estética e público se conectam de forma genuína.",
+      "Mais do que eventos, a Bereguedê & Afins cria encontros. Espaços onde música, estética e público se conectam de forma genuína.",
     svg: (
       <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z" fill="currentColor" fillOpacity="0.25" />
@@ -66,7 +66,7 @@ export default function Sobre() {
 
       <div className="mx-auto max-w-[1200px] px-6">
         <h2 className="mb-2 text-center text-4xl text-purple md:text-5xl text-balance">
-          Sobre a Bereguedê e Afins
+          Sobre a Bereguedê & Afins
         </h2>
 
         <div className="mx-auto mt-6 mb-12 max-w-[780px] text-center">
@@ -83,7 +83,7 @@ export default function Sobre() {
           </p>
 
           <p className="text-lg leading-relaxed text-gray-800 text-pretty">
-            A Bereguedê e Afins nasceu em 2023 a partir de um desejo simples: criar experiências autênticas, fora do óbvio, para um público que busca mais do que apenas festas — busca conexão, música de qualidade e ambientes com identidade.
+            A Bereguedê & Afins nasceu em 2023 a partir de um desejo simples: criar experiências autênticas, fora do óbvio, para um público que busca mais do que apenas festas — busca conexão, música de qualidade e ambientes com identidade.
           </p>
 
           <p className="mt-4 text-base leading-relaxed text-gray-600 text-pretty">
@@ -91,7 +91,7 @@ export default function Sobre() {
           </p>
 
           <p className="mt-4 text-base leading-relaxed text-gray-600 text-pretty">
-            Cada evento é pensado de forma única. A escolha dos artistas, dos espaços e da atmosfera não segue tendências — segue propósito. A Bereguedê e Afins se posiciona como uma produtora de festas alternativas, voltadas especialmente para um público mais maduro, que valoriza experiências bem construídas, diversidade musical e ambientes acolhedores.
+            Cada evento é pensado de forma única. A escolha dos artistas, dos espaços e da atmosfera não segue tendências — segue propósito. A Bereguedê & Afins se posiciona como uma produtora de festas alternativas, voltadas especialmente para um público mais maduro, que valoriza experiências bem construídas, diversidade musical e ambientes acolhedores.
           </p>
 
           <p className="mt-4 text-base leading-relaxed text-gray-600 text-pretty">
@@ -103,7 +103,7 @@ export default function Sobre() {
           </p>
 
           <p className="mt-6 text-lg font-semibold text-purple italic">
-            "Bereguedê e Afins é sobre sentir, pertencer e viver a experiência."
+            "Bereguedê & Afins é sobre sentir, pertencer e viver a experiência."
           </p>
 
           {/* Márcia Bity */}

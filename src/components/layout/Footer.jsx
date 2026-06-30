@@ -17,7 +17,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <h3 className="mb-2 font-heading text-xl font-bold text-yellow">
-              Bereguedê e Afins
+              Bereguedê & Afins
             </h3>
             <p className="max-w-[280px] text-sm text-white/60">
               {EVENT.description}
@@ -86,7 +86,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/10 pt-6 text-center text-xs opacity-50">
-          <p>&copy; 2026 Bereguedê e Afins. Todos os direitos reservados.</p>
+          <p>&copy; 2026 Bereguedê & Afins. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>

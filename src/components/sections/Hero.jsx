@@ -27,7 +27,7 @@ export default function Hero() {
       <div className="relative z-10 flex flex-col items-center gap-2 text-center md:gap-3">
         <Image
           src="/logo.png"
-          alt="Bereguedê e Afins"
+          alt="Bereguedê & Afins"
           width={450}
           height={450}
           priority

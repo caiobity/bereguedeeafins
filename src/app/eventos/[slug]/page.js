@@ -15,12 +15,12 @@ export async function generateMetadata({ params }) {
   const event = PAST_EVENTS.find((e) => e.slug === slug);
   if (!event) return {};
 
-  const title = `${event.attractions.join(" + ")} (${event.date}) | Bereguedê e Afins`;
+  const title = `${event.attractions.join(" + ")} (${event.date}) | Bereguedê & Afins`;
   return {
     title,
     description:
       event.summary ||
-      `Confira como foi a festa Bereguedê e Afins em ${event.date} com ${event.attractions.join(", ")}.`,
+      `Confira como foi a festa Bereguedê & Afins em ${event.date} com ${event.attractions.join(", ")}.`,
     openGraph: {
       title,
       images: event.images?.[0] ? [event.images[0]] : [],

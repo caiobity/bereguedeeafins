@@ -1,5 +1,5 @@
 export const EVENT = {
-  name: "Bereguedê e Afins",
+  name: "Bereguedê & Afins",
   date: "2026-09-26T16:00:00-03:00",
   dateDisplay: "26 de Setembro de 2026",
   dayOfWeek: "Sábado",
