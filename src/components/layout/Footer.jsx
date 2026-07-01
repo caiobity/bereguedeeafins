@@ -17,7 +17,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <h3 className="mb-2 font-heading text-xl font-bold text-yellow">
-              Bereguedê & Afins
+              Bereguedê <span className="font-serif italic font-medium">&</span> Afins
             </h3>
             <p className="max-w-[280px] text-sm text-white/60">
               {EVENT.description}

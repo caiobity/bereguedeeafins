@@ -66,7 +66,7 @@ export default function Sobre() {
 
       <div className="mx-auto max-w-[1200px] px-6">
         <h2 className="mb-2 text-center text-4xl text-purple md:text-5xl text-balance">
-          Sobre a Bereguedê & Afins
+          Sobre a Bereguedê <span className="font-serif italic font-medium">&</span> Afins
         </h2>
 
         <div className="mx-auto mt-6 mb-12 max-w-[780px] text-center">
