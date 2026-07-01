@@ -1,23 +1,24 @@
+import { MapPin, Calendar, Clock, Sparkles } from "lucide-react";
 import { EVENT } from "@/lib/constants";
 
 const DETAILS = [
   {
-    icon: "📍",
+    Icon: MapPin,
     title: "Endereço",
     lines: [EVENT.location, EVENT.locationDetail],
   },
   {
-    icon: "📅",
+    Icon: Calendar,
     title: "Data",
     lines: [`${EVENT.dateDisplay} (${EVENT.dayOfWeek})`],
   },
   {
-    icon: "🕐",
+    Icon: Clock,
     title: "Horário",
     lines: [`Abertura dos portões: ${EVENT.gateOpen}`, `Início: ${EVENT.startTime}`],
   },
   {
-    icon: "👔",
+    Icon: Sparkles,
     title: "Dress Code",
     lines: [EVENT.dressCode],
   },
@@ -33,12 +34,14 @@ export default function Local() {
 
         <div className="grid items-start gap-10 lg:grid-cols-2">
           <div className="flex flex-col gap-6">
-            {DETAILS.map((detail) => (
-              <div key={detail.title} className="flex gap-4">
-                <span className="shrink-0 text-3xl">{detail.icon}</span>
+            {DETAILS.map(({ Icon, title, lines }) => (
+              <div key={title} className="flex gap-4">
+                <div className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-linear-to-br from-pink to-purple text-white shadow-md">
+                  <Icon size={22} strokeWidth={2.2} aria-hidden="true" />
+                </div>
                 <div>
-                  <h4 className="mb-1 font-bold text-purple">{detail.title}</h4>
-                  {detail.lines.map((line) => (
+                  <h4 className="mb-1 font-bold text-purple">{title}</h4>
+                  {lines.map((line) => (
                     <p key={line} className="text-sm leading-relaxed text-gray-600">
                       {line}
                     </p>

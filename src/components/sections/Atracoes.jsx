@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Mic } from "lucide-react";
 import { ATTRACTIONS } from "@/lib/constants";
 import { cn } from "@/lib/cn";
 
@@ -21,7 +22,9 @@ export default function Atracoes() {
 
         {ATTRACTIONS.length === 0 && (
           <div className="mx-auto max-w-xl rounded-3xl border-2 border-dashed border-purple/30 bg-white px-8 py-12 text-center shadow-sm">
-            <div className="mb-4 text-5xl">🎤</div>
+            <div className="mx-auto mb-4 flex size-16 items-center justify-center rounded-2xl bg-linear-to-br from-pink to-purple text-white shadow-md">
+              <Mic size={30} strokeWidth={2.2} aria-hidden="true" />
+            </div>
             <h3 className="mb-2 text-2xl font-bold text-purple">
               Anúncio em breve
             </h3>

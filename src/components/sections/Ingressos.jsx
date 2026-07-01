@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Ticket, ArrowUpRight } from "lucide-react";
 import { EVENT, TICKETS, TICKET_CATEGORIES } from "@/lib/constants";
 import { useCheckout } from "@/context/CheckoutContext";
 import { cn } from "@/lib/cn";
@@ -172,7 +173,9 @@ export default function Ingressos() {
               rel="noopener noreferrer"
               className="group flex flex-col items-center rounded-3xl border-2 border-white/20 bg-white/[0.08] p-7 text-center shadow-lg backdrop-blur-sm transition-all duration-200 hover:-translate-y-1 hover:border-pink/60 hover:bg-white/[0.12] hover:shadow-xl"
             >
-              <div className="mb-3 text-4xl">🎟️</div>
+              <div className="mx-auto mb-3 flex size-14 items-center justify-center rounded-2xl bg-linear-to-br from-pink to-yellow text-purple-dark shadow-md">
+                <Ticket size={28} strokeWidth={2.2} aria-hidden="true" />
+              </div>
               <h3 className="mb-1 text-xl font-bold text-white">
                 Comprar no Shotgun
               </h3>
@@ -181,15 +184,15 @@ export default function Ingressos() {
               </p>
               <span className="mt-auto inline-flex items-center gap-1.5 rounded-2xl bg-linear-to-br from-pink to-yellow px-5 py-2.5 text-sm font-bold text-purple-dark shadow-md transition-all duration-200 group-hover:-translate-y-0.5 group-hover:shadow-lg">
                 Ir para Shotgun
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                  <path d="M7 17L17 7M17 7H9M17 7v8" />
-                </svg>
+                <ArrowUpRight size={16} strokeWidth={2.5} aria-hidden="true" />
               </span>
             </a>
           </div>
         ) : (
           <div className="mx-auto max-w-xl rounded-3xl border-2 border-dashed border-white/25 bg-white/[0.06] px-8 py-12 text-center backdrop-blur-sm">
-            <div className="mb-4 text-5xl">🎟️</div>
+            <div className="mx-auto mb-4 flex size-16 items-center justify-center rounded-2xl bg-linear-to-br from-pink to-yellow text-purple-dark shadow-md">
+              <Ticket size={30} strokeWidth={2.2} aria-hidden="true" />
+            </div>
             <h3 className="mb-2 text-2xl font-bold text-white">
               Vendas em breve
             </h3>

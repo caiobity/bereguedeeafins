@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { CalendarDays, MapPin, Clock, ArrowRight } from "lucide-react";
 import { EVENT, TICKETS } from "@/lib/constants";
 import AnimatedText from "@/components/ui/AnimatedText";
 import FloatingLogos from "./FloatingLogos";
@@ -37,7 +38,7 @@ export default function Hero() {
         {/* Badge de data */}
         <div className="animate-fade-up-1">
           <div className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-1.5 text-sm font-bold text-purple shadow-md md:px-5 md:py-2 md:text-base">
-            <span>📅</span>
+            <CalendarDays size={18} strokeWidth={2.4} aria-hidden="true" />
             <span>{EVENT.dateDisplay} &bull; {EVENT.dayOfWeek}</span>
           </div>
         </div>
@@ -49,8 +50,14 @@ export default function Hero() {
 
         {/* Local e hora */}
         <div className="animate-fade-up-2 flex flex-wrap items-center justify-center gap-4 text-sm font-semibold text-purple max-sm:flex-col max-sm:gap-1 md:gap-6 md:text-base">
-          <span>📍 {EVENT.location}</span>
-          <span>🕐 {EVENT.time}</span>
+          <span className="inline-flex items-center gap-1.5">
+            <MapPin size={18} strokeWidth={2.4} className="text-pink" aria-hidden="true" />
+            {EVENT.location}
+          </span>
+          <span className="inline-flex items-center gap-1.5">
+            <Clock size={18} strokeWidth={2.4} className="text-pink" aria-hidden="true" />
+            {EVENT.time}
+          </span>
         </div>
 
         {/* Botão CTA */}
@@ -60,9 +67,7 @@ export default function Hero() {
             className="inline-flex items-center gap-2 rounded-2xl bg-linear-to-br from-pink to-purple px-8 py-3.5 text-base font-bold text-white shadow-[0_4px_20px_rgba(230,38,122,0.35)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_6px_30px_rgba(230,38,122,0.5)] animate-pulse-glow md:px-10 md:py-4.5 md:text-lg"
           >
             {ticketsAvailable ? "Garanta seu Ingresso" : "Anúncio em breve"}
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
+            <ArrowRight size={20} strokeWidth={2.5} aria-hidden="true" />
           </a>
         </div>
       </div>

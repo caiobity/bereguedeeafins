@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
+import { MapPin } from "lucide-react";
 import { PAST_EVENTS } from "@/lib/constants";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -130,7 +131,9 @@ export default async function EventoPage({ params }) {
           {/* Location */}
           {event.location && (
             <div className="mb-8 flex items-start gap-3 rounded-2xl bg-gray-100 p-5">
-              <span className="text-2xl">📍</span>
+              <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-linear-to-br from-pink to-purple text-white shadow-md">
+                <MapPin size={20} strokeWidth={2.2} aria-hidden="true" />
+              </div>
               <div>
                 <p className="text-xs font-semibold uppercase tracking-wider text-pink">
                   Local
